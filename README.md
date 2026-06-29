@@ -1,17 +1,21 @@
 # Tubora Website
 
-Single-page website for **tubora.online** — contains the Privacy Policy, Disclaimer and Contact Us information for the Tubora app.
+Marketing landing page for **Tubora** — the AI-powered SEO & viral content app for YouTube Shorts creators. Live at **tubora.online**.
 
-## Files
-- `index.html` — the complete one-page site (all CSS is inline, no build step, no dependencies).
+## Pages
+- `index.html` — landing page (hero, app intro, features, how-it-works, Google Play download button, footer with links)
+- `privacy.html` — Privacy Policy
+- `disclaimer.html` — Disclaimer
+- `contact.html` — Contact Us
+- `legal.css` — shared styles for the legal/contact pages
 
-## Deploy
-Just upload `index.html` to your host (or point it at this repo via GitHub Pages / Netlify / Vercel) and connect the `tubora.online` domain.
+No build step, no dependencies — plain HTML/CSS.
 
-### GitHub Pages
-1. Push this folder to a GitHub repo.
+## Deploy (GitHub Pages)
+1. Push to GitHub.
 2. Repo → Settings → Pages → Source: `main` branch, `/root`.
-3. Add `tubora.online` as a custom domain.
+3. Add `tubora.online` as the custom domain.
 
-## Contact
-geekyprem4@gmail.com
+## Notes
+- Play Store button links to `com.shortseo.short_seo_ai`. Update the URL once the app is published if the package changes.
+- Contact email: geekyprem4@gmail.com

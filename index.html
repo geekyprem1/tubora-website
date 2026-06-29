@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tubora — Privacy Policy, Disclaimer & Contact</title>
-  <meta name="description" content="Tubora official page — Privacy Policy, Disclaimer and Contact information for the Tubora app." />
+  <title>Tubora — AI SEO & Viral Content for YouTube Shorts</title>
+  <meta name="description" content="Tubora is an AI-powered app that generates SEO titles, hashtags, descriptions, viral ideas and thumbnails for YouTube Shorts creators. Download free on Google Play." />
+  <meta property="og:title" content="Tubora — AI SEO & Viral Content for Shorts" />
+  <meta property="og:description" content="Generate SEO titles, hashtags, descriptions, viral ideas & thumbnails with AI. Built for YouTube Shorts creators." />
+  <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
   <style>
     :root {
-      --bg: #0b0f1a;
-      --bg-soft: #121829;
-      --card: #161d31;
+      --bg: #0a0e1a;
+      --bg-soft: #111729;
+      --card: #151c30;
       --border: #243049;
-      --text: #e8edf7;
+      --text: #eef2fb;
       --muted: #97a3bd;
       --brand: #7c5cff;
       --brand-2: #28c0ff;
-      --radius: 16px;
+      --radius: 18px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -26,251 +29,257 @@
       color: var(--text);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     a { color: var(--brand-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
 
-    /* Header / Nav */
+    /* glow backgrounds */
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(600px 400px at 80% -5%, rgba(124,92,255,0.22), transparent 60%),
+        radial-gradient(500px 360px at 5% 10%, rgba(40,192,255,0.16), transparent 60%);
+      pointer-events: none; z-index: 0;
+    }
+    header, main, footer { position: relative; z-index: 1; }
+
+    /* Header */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
+      position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(12px);
-      background: rgba(11, 15, 26, 0.78);
+      background: rgba(10, 14, 26, 0.72);
       border-bottom: 1px solid var(--border);
     }
     .nav {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; gap: 16px;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.2px;
-    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; }
     .brand .logo {
-      width: 32px; height: 32px;
-      border-radius: 9px;
+      width: 34px; height: 34px; border-radius: 10px;
       background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display: grid; place-items: center;
-      font-size: 18px;
+      display: grid; place-items: center; font-size: 19px;
     }
-    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav-links { display: flex; gap: 22px; align-items: center; }
     .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 600; }
     .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #fff !important; padding: 9px 18px; border-radius: 999px; font-weight: 700;
+    }
+    .nav-cta:hover { text-decoration: none; opacity: 0.92; }
+    @media (max-width: 640px){ .nav-links a:not(.nav-cta){ display:none; } }
 
     /* Hero */
-    .hero {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 64px 20px 36px;
-      text-align: center;
-    }
-    .hero .logo-big {
-      width: 72px; height: 72px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display: grid; place-items: center;
-      font-size: 38px;
-      margin: 0 auto 22px;
-      box-shadow: 0 18px 40px -16px rgba(124, 92, 255, 0.7);
+    .hero { text-align: center; padding: 80px 0 50px; }
+    .pill {
+      display: inline-block; padding: 6px 16px; border: 1px solid var(--border);
+      border-radius: 999px; color: var(--brand-2); font-size: 0.82rem; font-weight: 700;
+      background: rgba(40,192,255,0.07); margin-bottom: 26px;
     }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #fff, #b9c4dd);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 850; line-height: 1.1;
+      letter-spacing: -1px; max-width: 880px; margin: 0 auto;
     }
-    .hero p {
-      color: var(--muted);
-      max-width: 620px;
-      margin: 14px auto 0;
-      font-size: 1.05rem;
+    .hero h1 .grad {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .updated {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 6px 14px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 0.82rem;
+    .hero p.sub {
+      color: var(--muted); max-width: 640px; margin: 22px auto 0; font-size: 1.12rem;
     }
+    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+    .play-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #fff; color: #0a0e1a; padding: 13px 26px; border-radius: 14px;
+      font-weight: 700; box-shadow: 0 16px 40px -14px rgba(124,92,255,0.6);
+      transition: transform .15s ease;
+    }
+    .play-btn:hover { text-decoration: none; transform: translateY(-2px); }
+    .play-btn svg { width: 26px; height: 26px; }
+    .play-btn .small { font-size: 0.7rem; font-weight: 600; color: #555; line-height: 1; }
+    .play-btn .big { font-size: 1.15rem; font-weight: 800; line-height: 1.1; }
+    .ghost-btn {
+      display: inline-flex; align-items: center; padding: 13px 26px; border-radius: 14px;
+      border: 1px solid var(--border); color: var(--text); font-weight: 700;
+    }
+    .ghost-btn:hover { text-decoration: none; border-color: var(--brand); }
+    .hero-stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
+    .hero-stats .s b { font-size: 1.6rem; font-weight: 850; display: block; }
+    .hero-stats .s span { color: var(--muted); font-size: 0.86rem; }
 
     /* Sections */
-    main { max-width: 980px; margin: 0 auto; padding: 20px; }
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      margin-bottom: 24px;
-      scroll-margin-top: 90px;
-    }
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 6px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    section h2 .dot {
-      width: 10px; height: 10px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-    }
-    section h3 { margin: 22px 0 6px; font-size: 1.08rem; color: #d7defc; }
-    section p, section li { color: #cdd6ea; }
-    section ul { margin: 8px 0 8px 22px; }
-    section li { margin-bottom: 6px; }
-    .lead { color: var(--muted); margin-bottom: 8px; }
+    section { padding: 60px 0; }
+    .sec-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+    .sec-head .tag { color: var(--brand-2); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.8rem; }
+    .sec-head h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; margin-top: 8px; letter-spacing: -0.5px; }
+    .sec-head p { color: var(--muted); margin-top: 12px; }
 
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 18px;
+    /* Features grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .feature {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px; transition: transform .15s ease, border-color .15s ease;
     }
-    .contact-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
+    .feature:hover { transform: translateY(-4px); border-color: var(--brand); }
+    .feature .ic {
+      width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+      font-size: 23px; margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(124,92,255,0.25), rgba(40,192,255,0.18));
     }
-    .contact-card .icon { font-size: 22px; margin-bottom: 10px; }
-    .contact-card .label { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; }
-    .contact-card .value { font-weight: 700; font-size: 1.05rem; margin-top: 4px; word-break: break-word; }
+    .feature h3 { font-size: 1.12rem; margin-bottom: 6px; }
+    .feature p { color: var(--muted); font-size: 0.94rem; }
 
-    footer {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 30px 20px 50px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.88rem;
-      border-top: 1px solid var(--border);
+    /* How it works */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .step { background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+    .step .num {
+      width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+      font-weight: 800; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff;
+      margin-bottom: 16px;
     }
-    footer .brand { justify-content: center; margin-bottom: 10px; }
+    .step h3 { margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.94rem; }
+
+    /* Final CTA */
+    .final-cta {
+      text-align: center; background: linear-gradient(135deg, rgba(124,92,255,0.16), rgba(40,192,255,0.12));
+      border: 1px solid var(--border); border-radius: 26px; padding: 56px 24px; margin: 40px 0;
+    }
+    .final-cta h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 850; letter-spacing: -0.5px; }
+    .final-cta p { color: var(--muted); margin: 12px auto 28px; max-width: 520px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 50px 0 40px; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+    @media (max-width: 700px){ .foot-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .foot-grid p.about { color: var(--muted); margin-top: 12px; max-width: 320px; font-size: 0.92rem; }
+    .foot-col h4 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 14px; }
+    .foot-col a { display: block; color: #cdd6ea; margin-bottom: 10px; font-size: 0.95rem; }
+    .foot-col a:hover { color: var(--brand-2); text-decoration: none; }
+    .foot-bottom {
+      border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+      color: var(--muted); font-size: 0.88rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <nav class="nav">
-      <div class="brand">
-        <span class="logo">🎬</span>
-        <span>Tubora</span>
-      </div>
-      <div class="nav-links">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#disclaimer">Disclaimer</a>
-        <a href="#contact">Contact Us</a>
-      </div>
-    </nav>
+    <div class="wrap nav">
+      <div class="brand"><span class="logo">🎬</span><span>Tubora</span></div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.shortseo.short_seo_ai">Download</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="hero">
-    <div class="logo-big">🎬</div>
-    <h1>Tubora</h1>
-    <p>AI-powered tools to create SEO-optimized, viral-ready titles, descriptions and tags for your short videos.</p>
-    <span class="updated">Last updated: June 29, 2026</span>
-  </div>
-
   <main>
-    <!-- PRIVACY POLICY -->
-    <section id="privacy">
-      <h2><span class="dot"></span>Privacy Policy</h2>
-      <p class="lead">Your privacy matters to us. This policy explains what information Tubora ("we", "us", "our") collects and how we use it.</p>
-
-      <h3>Information We Collect</h3>
-      <ul>
-        <li><strong>Account information:</strong> When you sign up, we collect your name and email address to create and secure your account.</li>
-        <li><strong>Content you provide:</strong> Text, topics and prompts you enter to generate SEO and video content.</li>
-        <li><strong>Usage data:</strong> Basic app analytics such as features used and crash reports to improve the experience.</li>
-        <li><strong>Device information:</strong> Device type and operating system version for compatibility and support.</li>
-      </ul>
-
-      <h3>How We Use Your Information</h3>
-      <ul>
-        <li>To provide, operate and improve the Tubora app and its features.</li>
-        <li>To generate AI content based on the inputs you provide.</li>
-        <li>To maintain account security and prevent abuse.</li>
-        <li>To respond to your support requests and communicate important updates.</li>
-      </ul>
-
-      <h3>Data Sharing</h3>
-      <p>We do <strong>not</strong> sell your personal information. We may share data only with trusted service providers (such as cloud hosting and AI processing) strictly to operate the app, and only as required by law.</p>
-
-      <h3>Data Security</h3>
-      <p>We use industry-standard measures to protect your data. However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
-
-      <h3>Your Rights</h3>
-      <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at the email below. You can also delete your account directly from within the app.</p>
-
-      <h3>Children's Privacy</h3>
-      <p>Tubora is not intended for users under the age of 13, and we do not knowingly collect data from children.</p>
-
-      <h3>Changes to This Policy</h3>
-      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill">🚀 AI-Powered SEO for YouTube Shorts</span>
+        <h1>Go viral faster with <span class="grad">AI-generated SEO</span> for your Shorts</h1>
+        <p class="sub">Tubora creates click-worthy titles, smart hashtags, descriptions, viral ideas and thumbnails in seconds — so you can focus on creating, not guessing.</p>
+        <div class="cta-row">
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.shortseo.short_seo_ai">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d4ff" d="M47 16 312 256 47 496c-9 5-19-2-19-13V29c0-11 10-18 19-13z"/><path fill="#00f076" d="M47 16l205 186 60-60L84 8C72 1 58 5 47 16z"/><path fill="#ff3a44" d="M47 496l205-186 60 60-228 132c-12 7-26 3-37-6z"/><path fill="#ffce00" d="M372 196l85 49c16 9 16 33 0 42l-85 49-60-70 60-70z"/></svg>
+            <span style="text-align:left"><span class="small">GET IT ON</span><br><span class="big">Google Play</span></span>
+          </a>
+          <a class="ghost-btn" href="#features">Explore features</a>
+        </div>
+        <div class="hero-stats">
+          <div class="s"><b>9+</b><span>AI tools</span></div>
+          <div class="s"><b>Multi</b><span>Languages</span></div>
+          <div class="s"><b>Free</b><span>To start</span></div>
+        </div>
+      </div>
     </section>
 
-    <!-- DISCLAIMER -->
-    <section id="disclaimer">
-      <h2><span class="dot"></span>Disclaimer</h2>
-      <p class="lead">Please read this disclaimer carefully before using the Tubora app.</p>
-
-      <h3>AI-Generated Content</h3>
-      <p>Tubora uses artificial intelligence to generate titles, descriptions, tags and other content. This content is provided for assistance only and may not always be accurate, complete or suitable for your specific needs. You are responsible for reviewing and editing all generated content before publishing.</p>
-
-      <h3>No Guarantee of Results</h3>
-      <p>We do not guarantee any specific outcomes such as views, rankings, engagement, virality or revenue. Results depend on many factors outside our control, including platform algorithms and your own content.</p>
-
-      <h3>Third-Party Platforms</h3>
-      <p>Tubora is not affiliated with, endorsed by, or sponsored by YouTube, Instagram, TikTok, or any other platform. All trademarks belong to their respective owners. You are responsible for following the terms and policies of any platform where you publish content.</p>
-
-      <h3>Use at Your Own Risk</h3>
-      <p>The app is provided "as is" without warranties of any kind. To the fullest extent permitted by law, Tubora shall not be liable for any damages arising from your use of the app.</p>
+    <!-- FEATURES -->
+    <section id="features">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="tag">Features</div>
+          <h2>Everything you need to rank your Shorts</h2>
+          <p>One app, a full toolkit of AI generators built specifically for short-form video creators.</p>
+        </div>
+        <div class="grid">
+          <div class="feature"><div class="ic">✍️</div><h3>Title Generator</h3><p>Get 10 SEO-friendly, scroll-stopping titles for any topic — copy, regenerate or save instantly.</p></div>
+          <div class="feature"><div class="ic">#️⃣</div><h3>Hashtag Generator</h3><p>Generate 20 relevant, high-reach hashtags tailored to your content in one tap.</p></div>
+          <div class="feature"><div class="ic">📝</div><h3>Description Generator</h3><p>Write SEO-optimized descriptions that help your Shorts get discovered.</p></div>
+          <div class="feature"><div class="ic">🎯</div><h3>Content Generator</h3><p>Get a ready-to-record script with a strong hook, main content and a clear call-to-action.</p></div>
+          <div class="feature"><div class="ic">🔥</div><h3>Viral Shorts Ideas</h3><p>20 fresh, viral-ready ideas for your niche so you never run out of content.</p></div>
+          <div class="feature"><div class="ic">📈</div><h3>Trending Topics</h3><p>Discover what's trending by category, country and language to ride the wave early.</p></div>
+          <div class="feature"><div class="ic">🖼️</div><h3>Thumbnail Generator</h3><p>Create eye-catching AI thumbnails by topic and style — download in seconds.</p></div>
+          <div class="feature"><div class="ic">🔍</div><h3>SEO Analysis</h3><p>Paste a Shorts URL and get an SEO score with actionable suggestions to improve.</p></div>
+          <div class="feature"><div class="ic">🕑</div><h3>History</h3><p>All your generations saved on-device — open, copy or delete anytime.</p></div>
+        </div>
+      </div>
     </section>
 
-    <!-- CONTACT US -->
-    <section id="contact">
-      <h2><span class="dot"></span>Contact Us</h2>
-      <p class="lead">Have a question, feedback or a privacy request? We'd love to hear from you.</p>
+    <!-- HOW IT WORKS -->
+    <section id="how">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="tag">How it works</div>
+          <h2>From idea to optimized Short in 3 steps</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><h3>Enter your topic</h3><p>Type what your Short is about and pick your language.</p></div>
+          <div class="step"><div class="num">2</div><h3>Let AI do the work</h3><p>Tubora instantly generates titles, hashtags, descriptions, ideas and more.</p></div>
+          <div class="step"><div class="num">3</div><h3>Copy & publish</h3><p>Copy the content you love, paste it into YouTube, and watch your reach grow.</p></div>
+        </div>
+      </div>
+    </section>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="icon">📧</div>
-          <div class="label">Email</div>
-          <div class="value"><a href="mailto:geekyprem4@gmail.com">geekyprem4@gmail.com</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">🌐</div>
-          <div class="label">Website</div>
-          <div class="value"><a href="https://tubora.online">tubora.online</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">⏱️</div>
-          <div class="label">Response Time</div>
-          <div class="value">Within 48 hours</div>
+    <!-- FINAL CTA -->
+    <section>
+      <div class="wrap">
+        <div class="final-cta">
+          <h2>Ready to grow your channel?</h2>
+          <p>Download Tubora free and start creating SEO-optimized, viral-ready Shorts today.</p>
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.shortseo.short_seo_ai" style="margin:0 auto;">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d4ff" d="M47 16 312 256 47 496c-9 5-19-2-19-13V29c0-11 10-18 19-13z"/><path fill="#00f076" d="M47 16l205 186 60-60L84 8C72 1 58 5 47 16z"/><path fill="#ff3a44" d="M47 496l205-186 60 60-228 132c-12 7-26 3-37-6z"/><path fill="#ffce00" d="M372 196l85 49c16 9 16 33 0 42l-85 49-60-70 60-70z"/></svg>
+            <span style="text-align:left"><span class="small">GET IT ON</span><br><span class="big">Google Play</span></span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="brand">
-      <span class="logo">🎬</span>
-      <span>Tubora</span>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brand"><span class="logo">🎬</span><span>Tubora</span></div>
+          <p class="about">AI-powered SEO and viral content tools for YouTube Shorts creators. Create smarter, rank higher, grow faster.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="https://play.google.com/store/apps/details?id=com.shortseo.short_seo_ai">Download App</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 Tubora. All rights reserved.</span>
+        <span>Made for creators • tubora.online</span>
+      </div>
     </div>
-    <p>&copy; 2026 Tubora. All rights reserved.</p>
   </footer>
 </body>
 </html>
