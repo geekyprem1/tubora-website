@@ -8,17 +8,21 @@
   <meta property="og:title" content="Tubora — AI SEO & Viral Content for Shorts" />
   <meta property="og:description" content="Generate SEO titles, hashtags, descriptions, viral ideas & thumbnails with AI. Built for YouTube Shorts creators." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#121011" />
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
   <style>
     :root {
-      --bg: #0a0e1a;
-      --bg-soft: #111729;
-      --card: #151c30;
-      --border: #243049;
-      --text: #eef2fb;
-      --muted: #97a3bd;
-      --brand: #7c5cff;
-      --brand-2: #28c0ff;
+      --bg: #121011;
+      --bg-soft: #1a1718;
+      --card: #1f1a1b;
+      --border: #332a2b;
+      --text: #f7f2f2;
+      --muted: #b3a6a7;
+      --brand: #E53935;
+      --brand-dark: #C62828;
+      --brand-light: #FF6B6B;
       --radius: 18px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,17 +35,16 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-    a { color: var(--brand-2); text-decoration: none; }
+    a { color: var(--brand-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
 
-    /* glow backgrounds */
     body::before {
       content: "";
       position: fixed; inset: 0;
       background:
-        radial-gradient(600px 400px at 80% -5%, rgba(124,92,255,0.22), transparent 60%),
-        radial-gradient(500px 360px at 5% 10%, rgba(40,192,255,0.16), transparent 60%);
+        radial-gradient(620px 420px at 82% -5%, rgba(229,57,53,0.28), transparent 60%),
+        radial-gradient(520px 380px at 3% 8%, rgba(198,40,40,0.18), transparent 60%);
       pointer-events: none; z-index: 0;
     }
     header, main, footer { position: relative; z-index: 1; }
@@ -50,52 +53,45 @@
     header {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(12px);
-      background: rgba(10, 14, 26, 0.72);
+      background: rgba(18, 16, 17, 0.78);
       border-bottom: 1px solid var(--border);
     }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0; gap: 16px;
-    }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; }
-    .brand .logo {
-      width: 34px; height: 34px; border-radius: 10px;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display: grid; place-items: center; font-size: 19px;
-    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 1.2rem; color: var(--text); }
+    .brand:hover { text-decoration: none; }
+    .brand img { width: 38px; height: 38px; border-radius: 11px; }
     .nav-links { display: flex; gap: 22px; align-items: center; }
     .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 600; }
     .nav-links a:hover { color: var(--text); text-decoration: none; }
     .nav-cta {
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
       color: #fff !important; padding: 9px 18px; border-radius: 999px; font-weight: 700;
     }
     .nav-cta:hover { text-decoration: none; opacity: 0.92; }
     @media (max-width: 640px){ .nav-links a:not(.nav-cta){ display:none; } }
 
     /* Hero */
-    .hero { text-align: center; padding: 80px 0 50px; }
+    .hero { text-align: center; padding: 78px 0 50px; }
+    .hero .hero-logo { width: 110px; height: 110px; border-radius: 28px; margin-bottom: 26px; box-shadow: 0 24px 56px -18px rgba(229,57,53,0.7); }
     .pill {
       display: inline-block; padding: 6px 16px; border: 1px solid var(--border);
-      border-radius: 999px; color: var(--brand-2); font-size: 0.82rem; font-weight: 700;
-      background: rgba(40,192,255,0.07); margin-bottom: 26px;
+      border-radius: 999px; color: var(--brand-light); font-size: 0.82rem; font-weight: 700;
+      background: rgba(229,57,53,0.08); margin-bottom: 22px;
     }
     .hero h1 {
       font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 850; line-height: 1.1;
       letter-spacing: -1px; max-width: 880px; margin: 0 auto;
     }
     .hero h1 .grad {
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      background: linear-gradient(135deg, var(--brand-light), var(--brand));
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .hero p.sub {
-      color: var(--muted); max-width: 640px; margin: 22px auto 0; font-size: 1.12rem;
-    }
+    .hero p.sub { color: var(--muted); max-width: 640px; margin: 22px auto 0; font-size: 1.12rem; }
     .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
     .play-btn {
       display: inline-flex; align-items: center; gap: 12px;
-      background: #fff; color: #0a0e1a; padding: 13px 26px; border-radius: 14px;
-      font-weight: 700; box-shadow: 0 16px 40px -14px rgba(124,92,255,0.6);
+      background: #fff; color: #121011; padding: 13px 26px; border-radius: 14px;
+      font-weight: 700; box-shadow: 0 16px 40px -14px rgba(229,57,53,0.55);
       transition: transform .15s ease;
     }
     .play-btn:hover { text-decoration: none; transform: translateY(-2px); }
@@ -108,17 +104,17 @@
     }
     .ghost-btn:hover { text-decoration: none; border-color: var(--brand); }
     .hero-stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
-    .hero-stats .s b { font-size: 1.6rem; font-weight: 850; display: block; }
+    .hero-stats .s b { font-size: 1.6rem; font-weight: 850; display: block; color: var(--brand-light); }
     .hero-stats .s span { color: var(--muted); font-size: 0.86rem; }
 
     /* Sections */
     section { padding: 60px 0; }
     .sec-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
-    .sec-head .tag { color: var(--brand-2); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.8rem; }
+    .sec-head .tag { color: var(--brand-light); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.8rem; }
     .sec-head h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; margin-top: 8px; letter-spacing: -0.5px; }
     .sec-head p { color: var(--muted); margin-top: 12px; }
 
-    /* Features grid */
+    /* Features */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
     .feature {
       background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
@@ -128,25 +124,24 @@
     .feature .ic {
       width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
       font-size: 23px; margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(124,92,255,0.25), rgba(40,192,255,0.18));
+      background: linear-gradient(135deg, rgba(229,57,53,0.32), rgba(198,40,40,0.18));
     }
     .feature h3 { font-size: 1.12rem; margin-bottom: 6px; }
     .feature p { color: var(--muted); font-size: 0.94rem; }
 
-    /* How it works */
+    /* Steps */
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
     .step { background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
     .step .num {
       width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
-      font-weight: 800; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff;
-      margin-bottom: 16px;
+      font-weight: 800; background: linear-gradient(135deg, var(--brand), var(--brand-dark)); color: #fff; margin-bottom: 16px;
     }
     .step h3 { margin-bottom: 6px; }
     .step p { color: var(--muted); font-size: 0.94rem; }
 
     /* Final CTA */
     .final-cta {
-      text-align: center; background: linear-gradient(135deg, rgba(124,92,255,0.16), rgba(40,192,255,0.12));
+      text-align: center; background: linear-gradient(135deg, rgba(229,57,53,0.20), rgba(198,40,40,0.12));
       border: 1px solid var(--border); border-radius: 26px; padding: 56px 24px; margin: 40px 0;
     }
     .final-cta h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 850; letter-spacing: -0.5px; }
@@ -158,8 +153,8 @@
     @media (max-width: 700px){ .foot-grid { grid-template-columns: 1fr; gap: 28px; } }
     .foot-grid p.about { color: var(--muted); margin-top: 12px; max-width: 320px; font-size: 0.92rem; }
     .foot-col h4 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 14px; }
-    .foot-col a { display: block; color: #cdd6ea; margin-bottom: 10px; font-size: 0.95rem; }
-    .foot-col a:hover { color: var(--brand-2); text-decoration: none; }
+    .foot-col a { display: block; color: #ddd2d3; margin-bottom: 10px; font-size: 0.95rem; }
+    .foot-col a:hover { color: var(--brand-light); text-decoration: none; }
     .foot-bottom {
       border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px;
       display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
@@ -170,7 +165,7 @@
 <body>
   <header>
     <div class="wrap nav">
-      <div class="brand"><span class="logo">🎬</span><span>Tubora</span></div>
+      <a class="brand" href="index.html"><img src="logo.png" alt="Tubora logo" /><span>Tubora</span></a>
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
@@ -184,7 +179,8 @@
     <!-- HERO -->
     <section class="hero">
       <div class="wrap">
-        <span class="pill">🚀 AI-Powered SEO for YouTube Shorts</span>
+        <img class="hero-logo" src="logo.png" alt="Tubora app icon" />
+        <div><span class="pill">🚀 AI-Powered SEO for YouTube Shorts</span></div>
         <h1>Go viral faster with <span class="grad">AI-generated SEO</span> for your Shorts</h1>
         <p class="sub">Tubora creates click-worthy titles, smart hashtags, descriptions, viral ideas and thumbnails in seconds — so you can focus on creating, not guessing.</p>
         <div class="cta-row">
@@ -259,7 +255,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <div class="brand"><span class="logo">🎬</span><span>Tubora</span></div>
+          <a class="brand" href="index.html"><img src="logo.png" alt="Tubora logo" /><span>Tubora</span></a>
           <p class="about">AI-powered SEO and viral content tools for YouTube Shorts creators. Create smarter, rank higher, grow faster.</p>
         </div>
         <div class="foot-col">
