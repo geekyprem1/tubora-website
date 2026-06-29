@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tubora — Privacy Policy, Disclaimer & Contact</title>
+  <meta name="description" content="Tubora official page — Privacy Policy, Disclaimer and Contact information for the Tubora app." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --bg-soft: #121829;
+      --card: #161d31;
+      --border: #243049;
+      --text: #e8edf7;
+      --muted: #97a3bd;
+      --brand: #7c5cff;
+      --brand-2: #28c0ff;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--brand-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 26, 0.78);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.2px;
+    }
+    .brand .logo {
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      display: grid; place-items: center;
+      font-size: 18px;
+    }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 64px 20px 36px;
+      text-align: center;
+    }
+    .hero .logo-big {
+      width: 72px; height: 72px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      display: grid; place-items: center;
+      font-size: 38px;
+      margin: 0 auto 22px;
+      box-shadow: 0 18px 40px -16px rgba(124, 92, 255, 0.7);
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fff, #b9c4dd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 14px auto 0;
+      font-size: 1.05rem;
+    }
+    .updated {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* Sections */
+    main { max-width: 980px; margin: 0 auto; padding: 20px; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      scroll-margin-top: 90px;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    section h2 .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    }
+    section h3 { margin: 22px 0 6px; font-size: 1.08rem; color: #d7defc; }
+    section p, section li { color: #cdd6ea; }
+    section ul { margin: 8px 0 8px 22px; }
+    section li { margin-bottom: 6px; }
+    .lead { color: var(--muted); margin-bottom: 8px; }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .contact-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .contact-card .icon { font-size: 22px; margin-bottom: 10px; }
+    .contact-card .label { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-card .value { font-weight: 700; font-size: 1.05rem; margin-top: 4px; word-break: break-word; }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 30px 20px 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+    }
+    footer .brand { justify-content: center; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <span class="logo">🎬</span>
+        <span>Tubora</span>
+      </div>
+      <div class="nav-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="logo-big">🎬</div>
+    <h1>Tubora</h1>
+    <p>AI-powered tools to create SEO-optimized, viral-ready titles, descriptions and tags for your short videos.</p>
+    <span class="updated">Last updated: June 29, 2026</span>
+  </div>
+
+  <main>
+    <!-- PRIVACY POLICY -->
+    <section id="privacy">
+      <h2><span class="dot"></span>Privacy Policy</h2>
+      <p class="lead">Your privacy matters to us. This policy explains what information Tubora ("we", "us", "our") collects and how we use it.</p>
+
+      <h3>Information We Collect</h3>
+      <ul>
+        <li><strong>Account information:</strong> When you sign up, we collect your name and email address to create and secure your account.</li>
+        <li><strong>Content you provide:</strong> Text, topics and prompts you enter to generate SEO and video content.</li>
+        <li><strong>Usage data:</strong> Basic app analytics such as features used and crash reports to improve the experience.</li>
+        <li><strong>Device information:</strong> Device type and operating system version for compatibility and support.</li>
+      </ul>
+
+      <h3>How We Use Your Information</h3>
+      <ul>
+        <li>To provide, operate and improve the Tubora app and its features.</li>
+        <li>To generate AI content based on the inputs you provide.</li>
+        <li>To maintain account security and prevent abuse.</li>
+        <li>To respond to your support requests and communicate important updates.</li>
+      </ul>
+
+      <h3>Data Sharing</h3>
+      <p>We do <strong>not</strong> sell your personal information. We may share data only with trusted service providers (such as cloud hosting and AI processing) strictly to operate the app, and only as required by law.</p>
+
+      <h3>Data Security</h3>
+      <p>We use industry-standard measures to protect your data. However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h3>Your Rights</h3>
+      <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at the email below. You can also delete your account directly from within the app.</p>
+
+      <h3>Children's Privacy</h3>
+      <p>Tubora is not intended for users under the age of 13, and we do not knowingly collect data from children.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section id="disclaimer">
+      <h2><span class="dot"></span>Disclaimer</h2>
+      <p class="lead">Please read this disclaimer carefully before using the Tubora app.</p>
+
+      <h3>AI-Generated Content</h3>
+      <p>Tubora uses artificial intelligence to generate titles, descriptions, tags and other content. This content is provided for assistance only and may not always be accurate, complete or suitable for your specific needs. You are responsible for reviewing and editing all generated content before publishing.</p>
+
+      <h3>No Guarantee of Results</h3>
+      <p>We do not guarantee any specific outcomes such as views, rankings, engagement, virality or revenue. Results depend on many factors outside our control, including platform algorithms and your own content.</p>
+
+      <h3>Third-Party Platforms</h3>
+      <p>Tubora is not affiliated with, endorsed by, or sponsored by YouTube, Instagram, TikTok, or any other platform. All trademarks belong to their respective owners. You are responsible for following the terms and policies of any platform where you publish content.</p>
+
+      <h3>Use at Your Own Risk</h3>
+      <p>The app is provided "as is" without warranties of any kind. To the fullest extent permitted by law, Tubora shall not be liable for any damages arising from your use of the app.</p>
+    </section>
+
+    <!-- CONTACT US -->
+    <section id="contact">
+      <h2><span class="dot"></span>Contact Us</h2>
+      <p class="lead">Have a question, feedback or a privacy request? We'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📧</div>
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:geekyprem4@gmail.com">geekyprem4@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="icon">🌐</div>
+          <div class="label">Website</div>
+          <div class="value"><a href="https://tubora.online">tubora.online</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="icon">⏱️</div>
+          <div class="label">Response Time</div>
+          <div class="value">Within 48 hours</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <span class="logo">🎬</span>
+      <span>Tubora</span>
+    </div>
+    <p>&copy; 2026 Tubora. All rights reserved.</p>
+  </footer>
+</body>
+</html>
